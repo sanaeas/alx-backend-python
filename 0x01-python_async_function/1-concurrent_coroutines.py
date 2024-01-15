@@ -11,6 +11,7 @@ async def wait_n(n: int, max_delay: int) -> List[float]:
     Asynchronous routine that spawns wait_random n times
     """
     delays_list = []
+
     async def wait_random_and_append():
         delay = await wait_random(max_delay)
         delays_list.append(delay)
