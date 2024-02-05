@@ -105,6 +105,7 @@ class TestIntegrationGithubOrgClient(unittest.TestCase):
         }
 
         def mock_get(url):
+            """ get mock method """
             if url in payload:
                 return Mock(**{'json.return_value': payload[url]})
             return HTTPError
